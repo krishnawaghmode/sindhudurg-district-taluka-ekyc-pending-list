@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>कुडाळ तालुका गावांची रेशन KYC pending यादी</title>
+   <meta name="description" content="">
+   <meta name="google-site-verification" content="NEnxwDCCXwquMpiqk5kTprJpdqdm-JuY4j23nAIUhxs" />
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://krishnawaghmode.github.io/pune-district-taluka-ekyc-pending-list/कुडाळ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="कुडाळ तालुका गावांची रेशन KYC pending यादी">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://krishnawaghmode.github.io/pune-district-taluka-ekyc-pending-list/ration.jpeg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="krishnawaghmode.github.io">
+<meta property="twitter:url" content="https://krishnawaghmode.github.io/pune-district-taluka-ekyc-pending-list/कुडाळ.html">
+<meta name="twitter:title" content="कुडाळ तालुका गावांची रेशन KYC pending यादी">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://krishnawaghmode.github.io/pune-district-taluka-ekyc-pending-list/ration.jpeg">
+    <style>
+      :root {
+        --primary-color: #4caf50;
+        --primary-hover: #45a049;
+        --primary-active: #2e7d32;
+        --border-color: #ddd;
+        --text-color: #333;
+        --light-bg: #f5f5f5;
+        --white: #fff;
+        --pending-color: #ff9800;
+        --success-color: #4caf50;
+        --error-color: #f44336;
+        --table-even: #f9f9f9;
+        --table-hover: #f1f1f1;
+        --table-header: #f2f2f2;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 15px;
+        background-color: var(--light-bg);
+        color: var(--text-color);
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: var(--white);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        /* text-align: center;
+        margin-bottom: 20px;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        color: var(--primary-active); */
+        font-size: 20px;
+        /* margin: 0 0 15px 0; */
+        text-align: center;
+        color: #333;
+      }
+
+      h1 span {
+        /* font-weight: normal; */
+        color: var(--text-color);
+      }
+
+      .control-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .control-panel {
+          flex-direction: row;
+          align-items: flex-end;
+        }
+      }
+
+      .custom-select {
+        position: relative;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .select-header {
+        padding: 12px 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background-color: var(--white);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .select-header:hover {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+      }
+
+      .select-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background-color: var(--white);
+        max-height: 250px;
+        overflow-y: auto;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-top: 5px;
+      }
+
+      .select-options.visible {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .search-box {
+        padding: 12px;
+        width: calc(100% - 24px);
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        outline: none;
+        margin: 8px 12px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+      }
+
+      .search-box:focus {
+        border-bottom-color: var(--primary-color);
+      }
+
+      .select-option {
+        padding: 12px 15px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .select-option:hover {
+        background-color: rgba(76, 175, 80, 0.1);
+      }
+
+      .select-option.selected {
+        background-color: rgba(76, 175, 80, 0.2);
+        font-weight: 600;
+      }
+
+      .search-container {
+        flex: 1;
+        min-width: 0;
+      }
+
+      #search {
+        padding: 12px 15px;
+        width: 100%;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+
+      #search:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+      }
+
+      .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 10px;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border-color);
+        padding: 12px 15px;
+        text-align: left;
+      }
+
+      th {
+        background-color: var(--table-header);
+        position: sticky;
+        top: 0;
+        font-weight: 600;
+        color: var(--text-color);
+      }
+
+      tr:nth-child(even) {
+        background-color: var(--table-even);
+      }
+
+      tr:hover {
+        background-color: var(--table-hover);
+      }
+
+      .status-pending {
+        color: var(--pending-color);
+        font-weight: 600;
+      }
+
+      .status-success {
+        color: var(--success-color);
+        font-weight: 600;
+      }
+
+      .loading,
+      .error {
+        text-align: center;
+        padding: 30px;
+        margin: 20px 0;
+        border-radius: 6px;
+      }
+
+      .loading {
+        color: #666;
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      .error {
+        color: var(--error-color);
+        font-weight: 600;
+        background-color: rgba(244, 67, 54, 0.05);
+        border: 1px solid rgba(244, 67, 54, 0.2);
+      }
+
+      .arrow {
+        border: solid var(--text-color);
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 4px;
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+        margin-left: 10px;
+      }
+
+      .arrow.open {
+        transform: rotate(-135deg);
+      }
+
+      .results-info {
+        font-size: 14px;
+        color: #dd3a3a;
+        text-align: left;
+        margin-left: 5px;
+      }
+
+      /* Loading spinner */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top: 4px solid var(--primary-color);
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 15px;
+      }
+
+      /* Mobile optimizations */
+      @media (max-width: 767px) {
+        .container {
+          padding: 15px;
+        }
+
+        th,
+        td {
+          padding: 10px 12px;
+          font-size: 14px;
+        }
+
+        .select-header,
+        #search {
+          padding: 10px 12px;
+        }
+
+        .loading,
+        .error {
+          padding: 20px 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 10px;
+        }
+
+        th,
+        td {
+          padding: 8px 10px;
+          font-size: 13px;
+        }
+
+        .select-option {
+          padding: 10px 12px;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: none;
+          padding: 0;
+          font-size: 12pt;
+        }
+
+        .container {
+          box-shadow: none;
+          padding: 0;
+          max-width: 100%;
+        }
+
+        .control-panel,
+        #search,
+        .custom-select {
+          display: none;
+        }
+
+        table {
+          min-width: 100%;
+        }
+
+        th,
+        td {
+          padding: 8px 10px;
+        }
+      }
+    </style>
+     <link rel="stylesheet" href="marquee.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <span id="file-title" style="color: #d57914ee;text-decoration: underline;">कुडाळ तालुका</span> 
+        गावांची रेशन KYC pending यादी
+      </h1> <a href="index.html" 
+      style="display: flex; align-items: center; justify-content: center; padding: 5px 5px;
+             background-color: #2196F3; color: white; text-decoration: none; border-radius: 6px;
+             transition: all 0.3s; text-align: center; font-size: 15px; 
+             box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-weight: bold;
+             margin: 0; border: none; cursor: pointer;"
+      onmouseover="this.style.backgroundColor='#0b7dda';this.style.transform='translateY(-3px)';this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
+      onmouseout="this.style.backgroundColor='#2196F3';this.style.transform='none';this.style.boxShadow='0 2px 5px rgba(0,0,0,0.1)'">
+     <!-- होम -->
+     मुख्यपृष्ठ
+   </a>
+      <p style=" text-align: center; ">अधिक माहितीसाठी संपर्क करा 
+
+        <!-- <a href="tel:8600064713" style=" font-weight: bold; color: #eb0e0e; ">8600064713</a>  -->
+        <a href="tel:8600064713" rel="noopener" style=" font-weight: bold; color: #eb0e0e; ">
+ <svg height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+<path style="fill:#EDEDED;" d="M0,512l35.31-128C12.359,344.276,0,300.138,0,254.234C0,114.759,114.759,0,255.117,0
+    S512,114.759,512,254.234S395.476,512,255.117,512c-44.138,0-86.51-14.124-124.469-35.31L0,512z"></path>
+<path style="fill:#55CD6C;" d="M137.71,430.786l7.945,4.414c32.662,20.303,70.621,32.662,110.345,32.662
+    c115.641,0,211.862-96.221,211.862-213.628S371.641,44.138,255.117,44.138S44.138,137.71,44.138,254.234
+    c0,40.607,11.476,80.331,32.662,113.876l5.297,7.945l-20.303,74.152L137.71,430.786z"></path>
+<path style="fill:#FEFEFE;" d="M187.145,135.945l-16.772-0.883c-5.297,0-10.593,1.766-14.124,5.297
+    c-7.945,7.062-21.186,20.303-24.717,37.959c-6.179,26.483,3.531,58.262,26.483,90.041s67.09,82.979,144.772,105.048
+    c24.717,7.062,44.138,2.648,60.028-7.062c12.359-7.945,20.303-20.303,22.952-33.545l2.648-12.359
+    c0.883-3.531-0.883-7.945-4.414-9.71l-55.614-25.6c-3.531-1.766-7.945-0.883-10.593,2.648l-22.069,28.248
+    c-1.766,1.766-4.414,2.648-7.062,1.766c-15.007-5.297-65.324-26.483-92.69-79.448c-0.883-2.648-0.883-5.297,0.883-7.062
+    l21.186-23.834c1.766-2.648,2.648-6.179,1.766-8.828l-25.6-57.379C193.324,138.593,190.676,135.945,187.145,135.945"></path>
+</svg>
+  8600064713
+</a>
+<br>
+<a href="https://chat.whatsapp.com/EoZaV18JUUG5FJzPGQc4MF"  target="_blank" rel="noopener" style=" text-decoration: underline; color: cornflowerblue;font-weight: bold; ">
+     
+  📲 Join WhatsApp कम्युनिटी सामील होण्यासाठी
+</a>  
+<div class="marquee">
+  <div class="marquee-content">
+    रेशनकार्डची सर्व कामे ऑनलाईन करून मिळतील - नवीन मतदान कार्ड व दुरुस्ती - आधारकार्ड तुमच्या बँक खात्याशी लिंक करणे :- <strong>आरोही इंटरप्रायजेस बोरी रोड काझड</strong>
+  </div>
+</div>
+
+    </p>
+      <div class="control-panel">
+        <div class="custom-select" id="file-selector">
+          <div class="select-header" id="select-header">
+            <span id="selected-option">गाव किंवा रेशन दुकान नंबर निवडा</span>
+            <span class="arrow"></span>
+          </div>
+          <div class="select-options" id="select-options">
+            <input
+              type="text"
+              class="search-box"
+              id="option-search"
+              placeholder="तुमचं गाव किंवा रेशन दुकान नंबर शोधा..."
+            />
+          
+<div class="select-option" data-value="KUDAL/152907100002.json">Nerur-152907100002</div><div class="select-option" data-value="KUDAL/152907100003.json">Walawal-152907100003</div><div class="select-option" data-value="KUDAL/152907100007.json">Chendawan-152907100007</div><div class="select-option" data-value="KUDAL/152907100009.json">Mankadevi-152907100009</div><div class="select-option" data-value="KUDAL/152907100011.json">Madgaon-152907100011</div><div class="select-option" data-value="KUDAL/152907100013.json">Humarmala-152907100013</div><div class="select-option" data-value="KUDAL/152907100015.json">Andurle-152907100015</div><div class="select-option" data-value="KUDAL/152907100017.json">Pat-152907100017</div><div class="select-option" data-value="KUDAL/152907100018.json">Munagi-152907100018</div><div class="select-option" data-value="KUDAL/152907100019.json">Goveri-152907100019</div><div class="select-option" data-value="KUDAL/152907100021.json">Tendoli-152907100021</div><div class="select-option" data-value="KUDAL/152907100023.json">Wadivarvade-152907100023</div><div class="select-option" data-value="KUDAL/152907100026.json">Kudal-152907100026</div><div class="select-option" data-value="KUDAL/152907100027.json">Kudal-152907100027</div><div class="select-option" data-value="KUDAL/152907100029.json">Kudal-152907100029</div><div class="select-option" data-value="KUDAL/152907100030.json">Padave-152907100030</div><div class="select-option" data-value="KUDAL/152907100034.json">Kasal-152907100034</div><div class="select-option" data-value="KUDAL/152907100035.json">Kasal-152907100035</div><div class="select-option" data-value="KUDAL/152907100037.json">Ambrad-152907100037</div><div class="select-option" data-value="KUDAL/152907100042.json">Ambrad-152907100042</div><div class="select-option" data-value="KUDAL/152907100043.json">Pokharan-152907100043</div><div class="select-option" data-value="KUDAL/152907100045.json">Kunde-152907100045</div><div class="select-option" data-value="KUDAL/152907100047.json">Oras-152907100047</div><div class="select-option" data-value="KUDAL/152907100050.json">Anav-152907100050</div><div class="select-option" data-value="KUDAL/152907100051.json">Humarmala-152907100051</div><div class="select-option" data-value="KUDAL/152907100053.json">Pandur-152907100053</div><div class="select-option" data-value="KUDAL/152907100055.json">Bambarde-152907100055</div><div class="select-option" data-value="KUDAL/152907100058.json">Kupavade-152907100058</div><div class="select-option" data-value="KUDAL/152907100059.json">Jambhavade-152907100059</div><div class="select-option" data-value="KUDAL/152907100062.json">Sonavade-152907100062</div><div class="select-option" data-value="KUDAL/152907100064.json">Bhutvad-152907100064</div><div class="select-option" data-value="KUDAL/152907100065.json">Bhadgaon-152907100065</div><div class="select-option" data-value="KUDAL/152907100067.json">Nirukhe-152907100067</div><div class="select-option" data-value="KUDAL/152907100069.json">Warde-152907100069</div><div class="select-option" data-value="KUDAL/152907100070.json">Kadawal-152907100070</div><div class="select-option" data-value="KUDAL/152907100072.json">Pangrad-152907100072</div><div class="select-option" data-value="KUDAL/152907100073.json">Kusagaon-152907100073</div><div class="select-option" data-value="KUDAL/152907100074.json">Avalegaon-152907100074</div><div class="select-option" data-value="KUDAL/152907100076.json">Tembgaon-152907100076</div><div class="select-option" data-value="KUDAL/152907100078.json">Digas-152907100078</div><div class="select-option" data-value="KUDAL/152907100081.json">Karivane-152907100081</div><div class="select-option" data-value="KUDAL/152907100083.json">Girgaon-152907100083</div><div class="select-option" data-value="KUDAL/152907100085.json">Hirlok-152907100085</div><div class="select-option" data-value="KUDAL/152907100087.json">Tulsuli-152907100087</div><div class="select-option" data-value="KUDAL/152907100089.json">Narur-152907100089</div><div class="select-option" data-value="KUDAL/152907100091.json">Khutvalwadi-152907100091</div><div class="select-option" data-value="KUDAL/152907100094.json">Gothos-152907100094</div><div class="select-option" data-value="KUDAL/152907100095.json">Keravade-152907100095</div><div class="select-option" data-value="KUDAL/152907100097.json">Nerur-152907100097</div><div class="select-option" data-value="KUDAL/152907100099.json">Wasoli-152907100099</div><div class="select-option" data-value="KUDAL/152907100100.json">Wados-152907100100</div><div class="select-option" data-value="KUDAL/152907100101.json">Ghavanale-152907100101</div><div class="select-option" data-value="KUDAL/152907100104.json">Kaleli-152907100104</div><div class="select-option" data-value="KUDAL/152907100108.json">Mangaon-152907100108</div><div class="select-option" data-value="KUDAL/152907100109.json">Mangaon-152907100109</div><div class="select-option" data-value="KUDAL/152907100111.json">Ghatakarnagar-152907100111</div><div class="select-option" data-value="KUDAL/152907100113.json">Salgaon-152907100113</div><div class="select-option" data-value="KUDAL/152907100116.json">Bhattgaon-152907100116</div><div class="select-option" data-value="KUDAL/152907100118.json">Bav-152907100118</div><div class="select-option" data-value="KUDAL/152907100121.json">Pawashi-152907100121</div><div class="select-option" data-value="KUDAL/152907100123.json">Mulade-152907100123</div><div class="select-option" data-value="KUDAL/152907100125.json">Tulsuli-152907100125</div><div class="select-option" data-value="KUDAL/152907100127.json">Mandkuli-152907100127</div><div class="select-option" data-value="KUDAL/152907100129.json">Gudhipur-152907100129</div><div class="select-option" data-value="KUDAL/152907100132.json">Pinguli-152907100132</div><div class="select-option" data-value="KUDAL/152907100133.json">Pinguli-152907100133</div><div class="select-option" data-value="KUDAL/152907100135.json">Bibavane-152907100135</div><div class="select-option" data-value="KUDAL/152907100136.json">Bibavane-152907100136</div><div class="select-option" data-value="KUDAL/152907100137.json">Bambarde-152907100137</div><div class="select-option" data-value="KUDAL/152907100142.json">Zarap-152907100142</div><div class="select-option" data-value="KUDAL/152907100144.json">Akeri-152907100144</div><div class="select-option" data-value="KUDAL/152907100146.json">Sonavade-152907100146</div><div class="select-option" data-value="KUDAL/152907100148.json">Sarambal-152907100148</div><div class="select-option" data-value="KUDAL/152907100150.json">Kavilgaon-152907100150</div><div class="select-option" data-value="KUDAL/152907100151.json">Kutgaon-152907100151</div><div class="select-option" data-value="KUDAL/152907100154.json">Ghotage-152907100154</div><div class="select-option" data-value="KUDAL/152907100156.json">Nivaje-152907100156</div><div class="select-option" data-value="KUDAL/152907100160.json">Rumadgaon-152907100160</div><div class="select-option" data-value="KUDAL/152907110002.json">Shivapur-152907110002</div><div class="select-option" data-value="KUDAL/152907110003.json">Gaorai-152907110003</div><div class="select-option" data-value="KUDAL/152907110004.json">Upavade-152907110004</div>
+
+          
+            <!-- <div class="select-option" data-value="all">All Files</div> -->
+          </div>
+        </div>
+
+        <div class="search-container" id="searchContainer">
+          <input
+            type="text"
+            id="search"
+            placeholder="आधारकार्ड नंबर शेवटचे ४ किंवा रेशन नंबर, नावाने शोधा..."
+          />
+        </div>
+      </div>
+
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <!-- <p>Select load data...</p> -->
+      </div>
+
+      <div class="table-wrapper">
+        <div id="results"></div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // DOM elements
+        const selectHeader = document.getElementById("select-header");
+        const selectOptions = document.getElementById("select-options");
+        const selectedOption = document.getElementById("selected-option");
+        const optionSearch = document.getElementById("option-search");
+        const allOptions = document.querySelectorAll(
+          ".select-option:not(:first-child)"
+        );
+        const arrow = document.querySelector(".arrow");
+        const searchInput = document.getElementById("search");
+        const resultsDiv = document.getElementById("results");
+        const loadingDiv = document.getElementById("loading");
+        const fileTitleSpan = document.getElementById("file-title");
+        const searchContainer = document.getElementById("searchContainer");
+
+        searchContainer.style.display = "none";
+
+        loadingDiv.style.display = "none";
+
+        // Data variables
+        let allData = [];
+        let currentData = [];
+
+        // Toggle dropdown visibility
+        selectHeader.addEventListener("click", function (e) {
+          e.stopPropagation();
+          selectOptions.classList.toggle("visible");
+          arrow.classList.toggle("open");
+
+          if (selectOptions.classList.contains("visible")) {
+            searchInput.value="";
+            optionSearch.focus();
+          }
+        });
+
+        // Filter options based on search input
+        optionSearch.addEventListener("input", function () {
+          const searchTerm = this.value.toLowerCase();
+          allOptions.forEach((option) => {
+            const text = option.textContent.toLowerCase();
+            option.style.display = text.includes(searchTerm) ? "block" : "none";
+          });
+        });
+
+        // Handle option selection
+        document.querySelectorAll(".select-option").forEach((option) => {
+          option.addEventListener("click", function (e) {
+            e.stopPropagation();
+            selectedOption.textContent = this.textContent;
+            selectOptions.classList.remove("visible");
+            arrow.classList.remove("open");
+            optionSearch.value = "";
+            allOptions.forEach((opt) => (opt.style.display = "block"));
+
+            const file = this.getAttribute("data-value");
+            if (file === undefined) return;
+
+            // Update the title based on selection
+            if (file === "all") {
+              fileTitleSpan.textContent = "All Files";
+              loadAllData();
+            } else if (file) {
+              // Extract just the filename without path for display
+              const VillName = this.textContent.split("-")[0];
+              fileTitleSpan.textContent = VillName;
+              loadSingleFile(file);
+              // loadSingleFile(file);
+            } else {
+              fileTitleSpan.textContent = "कुडाळ तालुका";
+            }
+          });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function () {
+          selectOptions.classList.remove("visible");
+          arrow.classList.remove("open");
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        selectOptions.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+
+        // Show loading state with spinner
+        function showLoading(message) {
+          loadingDiv.innerHTML = `
+                    <div class="spinner"></div>
+                    <p>${message}</p>
+                `;
+          loadingDiv.className = "loading";
+          loadingDiv.style.display = "block";
+          searchContainer.style.display = "block";
+        }
+
+        // Show error message
+        function showError(message) {
+          loadingDiv.innerHTML = `<p>${message}</p>`;
+          loadingDiv.className = "error";
+          loadingDiv.style.display = "block";
+        }
+
+        // Hide loading/error messages
+        function hideMessages() {
+          loadingDiv.style.display = "none";
+        }
+
+        // Load all JSON files
+        async function loadAllData() {
+          showLoading("Loading data from all files...");
+          resultsDiv.innerHTML = "";
+
+          try {
+            const files = ["index3/10.json"];
+            const promises = files.map((file) =>
+              fetch(file)
+                .then((res) => {
+                  if (!res.ok)
+                    throw new Error(`Failed to load ${file}: ${res.status}`);
+                  return res.json();
+                })
+                .catch((err) => {
+                  console.error(`Error loading ${file}:`, err);
+                  return [];
+                })
+            );
+
+            const dataArrays = await Promise.all(promises);
+            allData = dataArrays.flat();
+
+            if (allData.length === 0) {
+              throw new Error("No data loaded from any files");
+            }
+
+            currentData = [...allData];
+            displayData(currentData);
+            hideMessages();
+          } catch (error) {
+            showError("Error loading data: " + error.message);
+            console.error("Error loading data:", error);
+          }
+        }
+
+        // Load single JSON file
+        async function loadSingleFile(file) {
+          showLoading(`KYC Pending यादी दाखवत आहे...`);
+          resultsDiv.innerHTML = "";
+
+          try {
+            const response = await fetch(file);
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            currentData = await response.json();
+
+            if (!Array.isArray(currentData)) {
+              throw new Error("Loaded data is not an array");
+            }
+
+            displayData(currentData);
+            hideMessages();
+          } catch (error) {
+            showError(`Error loading ${file}: ${error.message}`);
+            console.error(`Error loading ${file}:`, error);
+          }
+        }
+
+        // Display data in a responsive table
+        function displayData(data) {
+          if (data.length === 0) {
+            resultsDiv.innerHTML =
+              '<p class="error">यादी दाखवत नाही, KYC झालेली असेल.</p>';
+            return;
+          }
+          // <th>SrNo</th>
+          // <th>Member Id</th>
+          // <th>Office</th>
+          let html = `<p class="results-info">${data.length} KYC राहिलेली नावे दाखवत आहे</p>
+                    <table>
+                        <thead>
+                            <tr>
+                               
+                                <th>रेशन नंबर</th>
+                               
+                                <th>नाव</th>
+                                <th>आधार नंबर</th>
+                                <th>लिंग</th>
+                                <th>प्रकार</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+          data.forEach((item) => {
+            // <td>${item.SrNo}</td>
+            //  <td>${item.MemberId}</td>
+            // <td>${item.Office}</td>
+            html += `
+                        <tr>
+                           
+                            <td>${item.RC_Id}</td>
+                           
+                            <td>${item.MemberName}</td>
+                            <td>${item.UID}</td>
+                            <td>${item.Gender}</td>
+                            <td>${item.Scheme}</td>
+                        </tr>
+                    `;
+          });
+
+          html += `
+                        </tbody>
+                    </table> `;
+          // <p class="results-info">Showing ${data.length} records</p>
+
+          resultsDiv.innerHTML = html;
+        }
+
+        // Filter data based on search input
+        function filterData() {
+          const searchTerm = searchInput.value.toLowerCase();
+
+          if (!searchTerm) {
+            displayData(currentData);
+            return;
+          }
+
+          const filtered = currentData.filter(
+            (item) =>
+              item.RC_Id.toLowerCase().includes(searchTerm) ||
+              item.MemberName.toLowerCase().includes(searchTerm) ||
+              item.UID.toLowerCase().includes(searchTerm)
+          );
+          displayData(filtered);
+        }
+
+        // Initialize
+        searchInput.addEventListener("input", filterData);
+      });
+    </script>
+  </body>
+</html>

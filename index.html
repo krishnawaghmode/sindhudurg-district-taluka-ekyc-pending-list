@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>सिंधुदुर्ग जिल्ह्यातील तालुक्यातील eKYC "Pending" यादी पाहण्यासाठी सोपी करून दिली आहे.</title>
+   <meta name="description" content="">
+   <meta name="google-site-verification" content="NEnxwDCCXwquMpiqk5kTprJpdqdm-JuY4j23nAIUhxs" />
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://krishnawaghmode.github.io/pune-district-taluka-ekyc-pending-list">
+<meta property="og:type" content="website">
+<meta property="og:title" content="सिंधुदुर्ग जिल्ह्यातील तालुक्यातील eKYC Pending यादी पाहण्यासाठी सोपी करून दिली आहे.">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://krishnawaghmode.github.io/pune-district-taluka-ekyc-pending-list/ration.jpeg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="krishnawaghmode.github.io">
+<meta property="twitter:url" content="https://krishnawaghmode.github.io/pune-district-taluka-ekyc-pending-list">
+<meta name="twitter:title" content="सिंधुदुर्ग जिल्ह्यातील तालुक्यातील eKYC Pending यादी पाहण्यासाठी सोपी करून दिली आहे.">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://krishnawaghmode.github.io/pune-district-taluka-ekyc-pending-list/ration.jpeg">
+    <style>
+      :root {
+        --primary-color: #4caf50;
+        --primary-hover: #45a049;
+        --primary-active: #2e7d32;
+        --border-color: #ddd;
+        --text-color: #333;
+        --light-bg: #f5f5f5;
+        --white: #fff;
+        --pending-color: #ff9800;
+        --success-color: #4caf50;
+        --error-color: #f44336;
+        --table-even: #f9f9f9;
+        --table-hover: #f1f1f1;
+        --table-header: #f2f2f2;
+        --maroon-color: #d57914ee;
+        --red-color: #eb0e0e;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 15px;
+        background-color: var(--light-bg);
+        color: var(--text-color);
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: var(--white);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 24px;
+        text-align: center;
+        color: #333;
+        /* margin-bottom: 15px; */
+      }
+
+      h1 span {
+        color: var(--maroon-color);
+        text-decoration: underline;
+      }
+
+      .contact-info {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-info a {
+        font-weight: bold;
+        color: var(--red-color);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      
+      /* Style for the responsive links section */
+      .links-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+        margin: 25px 0;
+      }
+      
+      .responsive-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 10px;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.3s;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        min-height: 50px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      
+      .responsive-link:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      }
+      
+      @media (max-width: 768px) {
+        .links-container {
+          grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        }
+        
+        .responsive-link {
+          padding: 10px 8px;
+          font-size: 14px;
+          min-height: 45px;
+          font-weight: bold;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .container {
+          padding: 15px;
+        }
+        
+        .links-container {
+          grid-template-columns: 1fr 1fr;
+        }
+        
+        h1 {
+          font-size: 20px;
+        }
+        
+        .marquee-content {
+          font-size: 14px;
+        }
+      }
+
+      /* Loading spinner */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top: 4px solid var(--primary-color);
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 15px;
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: none;
+          padding: 0;
+          font-size: 12pt;
+        }
+
+        .container {
+          box-shadow: none;
+          padding: 0;
+          max-width: 100%;
+        }
+
+        .marquee, .links-container {
+          display: none;
+        }
+      }
+    </style>
+     <link rel="stylesheet" href="marquee.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <span id="file-title">सिंधुदुर्ग जिल्ह्यातील</span> 
+          तालुक्यातील eKYC "Pending" यादी माहिती मिळवण्यासाठी तालुक्याचे लिंकला भेट द्या.
+      </h1>
+      <div id="contact_info">
+      
+      </div>
+      
+      <!-- Taluka Links -->
+      <div class="links-container">
+        <a href="कुडाळ.html" class="responsive-link">कुडाळ</a>
+      </div>
+<!-- <hr> -->
+      <div class="control-panel" style=" margin-left: 10px; ">
+        <h3 style="
+        text-align: center;
+        background-color: #e5d388;
+        margin-top: -20px;
+        border-radius: 18px;
+        color: #FF5722;;
+    " class="">ई-केवायसी करण्यासाठी आवश्यक ॲप्स:</h3>
+      <ol>
+        <li><strong>Mera eKYC मोबाईल ॲप:</strong> हे ॲप <a href="https://play.google.com/store/apps/details?id=com.nic.facialauth" target="_blank">डाउनलोड</a>  करून आपण आपल्या मोबाईलद्वारे सहजपणे ई-केवायसी पूर्ण करू शकता.</li>
+        <li><strong>AadhaarFaceRD ॲप:</strong> <a href="https://play.google.com/store/apps/details?id=in.gov.uidai.facerd" target="_blank">डाउनलोड</a> फेस स्कॅनद्वारे ओळख पडताळणी करण्यासाठी हे ॲप आवश्यक आहे.​</li>
+      </ol>
+
+      <h4 style=" color: chocolate;margin-top: 10px; ">ई-केवायसी प्रक्रिया:</h4>
+      <ol>
+        <li><strong>Mera eKYC ॲप उघडा आणि माहिती भरा:</strong></li>
+        <ul>
+          <li>ॲप उघडल्यानंतर राज्य आणि जिल्हा निवडा</li>
+          <li>आपला आधार क्रमांक टाका आणि मोबाईलवर आलेला OTP प्रविष्ट करा.​</li>
+          <li>आपली सर्व माहिती पडताळून ती सबमिट करा.​​</li>
+        </ul>
+        <li><strong>AadhaarFace स्कॅन प्रक्रिया पूर्ण करा:</strong></li>
+        <ul>
+          <li>'फेस ई-केवायसी' पर्याय निवडा आणि सेल्फी कॅमेरा सुरू करा.​
+          </li>
+
+          <li>कॅमेऱ्यासमोर डोळे उघड-बंद करा, यामुळे चेहरा स्कॅन होईल.
+          </li>
+
+          <li>प्रक्रिया पूर्ण झाल्यावर यशस्वी ई-केवायसीचा मेसेज मिळेल.</li>
+         
+        </ul>
+      </ol>
+      </div>
+    </div>
+
+    <script>
+      // Load contact
+      fetch('contact.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contact_info').innerHTML = data;
+            });
+    </script>
+  </body>
+</html>
