@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>कुडाळ तालुका गावांची रेशन KYC pending यादी</title>
+   <meta name="description" content="">
+   <meta name="google-site-verification" content="NEnxwDCCXwquMpiqk5kTprJpdqdm-JuY4j23nAIUhxs" />
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://rationhelp.site/sindhudurg-kudal-ekyc-pending-list">
+<meta property="og:type" content="website">
+<meta property="og:title" content="कुडाळ तालुका गावांची रेशन KYC pending यादी">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://rationhelp.site/ration.jpeg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="rationhelp.site">
+<meta property="twitter:url" content="https://rationhelp.site/sindhudurg-kudal-ekyc-pending-list">
+<meta name="twitter:title" content="कुडाळ तालुका गावांची रेशन KYC pending यादी">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://rationhelp.site/ration.jpeg">
+    <style>
+      :root {
+        --primary-color: #4caf50;
+        --primary-hover: #45a049;
+        --primary-active: #2e7d32;
+        --border-color: #ddd;
+        --text-color: #333;
+        --light-bg: #f5f5f5;
+        --white: #fff;
+        --pending-color: #ff9800;
+        --success-color: #4caf50;
+        --error-color: #f44336;
+        --table-even: #f9f9f9;
+        --table-hover: #f1f1f1;
+        --table-header: #f2f2f2;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        /* padding: 15px; */
+        background-color: var(--light-bg);
+        color: var(--text-color);
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: var(--white);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        /* text-align: center;
+        margin-bottom: 20px;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        color: var(--primary-active); */
+        font-size: 20px;
+        /* margin: 0 0 15px 0; */
+        text-align: center;
+        color: #333;
+      }
+
+      h1 span {
+        /* font-weight: normal; */
+        color: var(--text-color);
+      }
+
+      .control-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .control-panel {
+          flex-direction: row;
+          align-items: flex-end;
+        }
+      }
+
+      .custom-select {
+        position: relative;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .select-header {
+        padding: 12px 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background-color: var(--white);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .select-header:hover {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+      }
+
+      .select-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background-color: var(--white);
+        max-height: 250px;
+        overflow-y: auto;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-top: 5px;
+      }
+
+      .select-options.visible {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .search-box {
+        padding: 12px;
+        width: calc(100% - 24px);
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        outline: none;
+        margin: 8px 12px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+      }
+
+      .search-box:focus {
+        border-bottom-color: var(--primary-color);
+      }
+
+      .select-option {
+        padding: 12px 15px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .select-option:hover {
+        background-color: rgba(76, 175, 80, 0.1);
+      }
+
+      .select-option.selected {
+        background-color: rgba(76, 175, 80, 0.2);
+        font-weight: 600;
+      }
+
+      .search-container {
+        flex: 1;
+        min-width: 0;
+      }
+
+      #search {
+        padding: 12px 15px;
+        width: 100%;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+
+      #search:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+      }
+
+      .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 10px;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border-color);
+        padding: 12px 15px;
+        text-align: left;
+      }
+
+      th {
+        background-color: var(--table-header);
+        position: sticky;
+        top: 0;
+        font-weight: 600;
+        color: var(--text-color);
+      }
+
+      tr:nth-child(even) {
+        background-color: var(--table-even);
+      }
+
+      tr:hover {
+        background-color: var(--table-hover);
+      }
+
+      .status-pending {
+        color: var(--pending-color);
+        font-weight: 600;
+      }
+
+      .status-success {
+        color: var(--success-color);
+        font-weight: 600;
+      }
+
+      .loading,
+      .error {
+        text-align: center;
+        padding: 30px;
+        margin: 20px 0;
+        border-radius: 6px;
+      }
+
+      .loading {
+        color: #666;
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      .error {
+        color: var(--error-color);
+        font-weight: 600;
+        background-color: rgba(244, 67, 54, 0.05);
+        border: 1px solid rgba(244, 67, 54, 0.2);
+      }
+
+      .arrow {
+        border: solid var(--text-color);
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 4px;
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+        margin-left: 10px;
+      }
+
+      .arrow.open {
+        transform: rotate(-135deg);
+      }
+
+      .results-info {
+        font-size: 14px;
+        color: #dd3a3a;
+        text-align: left;
+        margin-left: 5px;
+      }
+
+      /* Loading spinner */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top: 4px solid var(--primary-color);
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 15px;
+      }
+
+      /* Mobile optimizations */
+      @media (max-width: 767px) {
+        .container {
+          padding: 15px;
+        }
+
+        th,
+        td {
+          padding: 10px 12px;
+          font-size: 14px;
+        }
+
+        .select-header,
+        #search {
+          padding: 10px 12px;
+        }
+
+        .loading,
+        .error {
+          padding: 20px 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          /* padding: 10px; */
+        }
+
+        th,
+        td {
+          padding: 8px 10px;
+          font-size: 13px;
+        }
+
+        .select-option {
+          padding: 10px 12px;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: none;
+          padding: 0;
+          font-size: 12pt;
+        }
+
+        .container {
+          box-shadow: none;
+          padding: 0;
+          max-width: 100%;
+        }
+
+        .control-panel,
+        #search,
+        .custom-select {
+          display: none;
+        }
+
+        table {
+          min-width: 100%;
+        }
+
+        th,
+        td {
+          padding: 8px 10px;
+        }
+      }
+        /* Style for the responsive links section */
+        .links-container {
+        /* display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+        margin: 25px 0; */
+        border: 1px solid var(--border-color);
+    border-radius: 35px;
+}
+      
+      
+      .responsive-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 10px;
+        /* background-color: var(--primary-color); */
+        color: rgb(28, 186, 131);
+        text-decoration: none;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        min-height: 50px;
+        margin-top: 15px !important;
+        /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+      }
+      
+      .responsive-link:hover {
+        /* background-color: var(--primary-hover); */
+        transform: translateY(-3px);
+        /* box-shadow: 0 4px 8px rgba(0,0,0,0.15); */
+      }
+    </style>
+     <link rel="stylesheet" href="marquee.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <span id="file-title" style="color: #d57914ee;text-decoration: underline;">कुडाळ तालुका</span> 
+        गावांची रेशन KYC pending यादी
+      </h1> 
+      <p style=" text-align: center; ">अधिक माहितीसाठी संपर्क करा 
+
+        <!-- <a href="tel:8600064713" style=" font-weight: bold; color: #eb0e0e; ">8600064713</a>  -->
+        <a href="tel:8600064713" rel="noopener" style=" font-weight: bold; color: #eb0e0e; ">
+ <svg height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+<path style="fill:#EDEDED;" d="M0,512l35.31-128C12.359,344.276,0,300.138,0,254.234C0,114.759,114.759,0,255.117,0
+    S512,114.759,512,254.234S395.476,512,255.117,512c-44.138,0-86.51-14.124-124.469-35.31L0,512z"></path>
+<path style="fill:#55CD6C;" d="M137.71,430.786l7.945,4.414c32.662,20.303,70.621,32.662,110.345,32.662
+    c115.641,0,211.862-96.221,211.862-213.628S371.641,44.138,255.117,44.138S44.138,137.71,44.138,254.234
+    c0,40.607,11.476,80.331,32.662,113.876l5.297,7.945l-20.303,74.152L137.71,430.786z"></path>
+<path style="fill:#FEFEFE;" d="M187.145,135.945l-16.772-0.883c-5.297,0-10.593,1.766-14.124,5.297
+    c-7.945,7.062-21.186,20.303-24.717,37.959c-6.179,26.483,3.531,58.262,26.483,90.041s67.09,82.979,144.772,105.048
+    c24.717,7.062,44.138,2.648,60.028-7.062c12.359-7.945,20.303-20.303,22.952-33.545l2.648-12.359
+    c0.883-3.531-0.883-7.945-4.414-9.71l-55.614-25.6c-3.531-1.766-7.945-0.883-10.593,2.648l-22.069,28.248
+    c-1.766,1.766-4.414,2.648-7.062,1.766c-15.007-5.297-65.324-26.483-92.69-79.448c-0.883-2.648-0.883-5.297,0.883-7.062
+    l21.186-23.834c1.766-2.648,2.648-6.179,1.766-8.828l-25.6-57.379C193.324,138.593,190.676,135.945,187.145,135.945"></path>
+</svg>
+  8600064713
+</a>
+<br>
+<a href="https://chat.whatsapp.com/EoZaV18JUUG5FJzPGQc4MF"  target="_blank" rel="noopener" style=" text-decoration: underline; color: cornflowerblue;font-weight: bold; ">
+     
+  📲 Join WhatsApp कम्युनिटी सामील होण्यासाठी
+</a>  
+
+
+    </p>
+      <!-- <div class="control-panel"> -->
+        <!-- <div class="links-container"> -->
+          <a href="https://rationhelp.site/sindhudurg-kudal-ekyc-pending-list" class="responsive-link">https://rationhelp.site लिंकला भेट द्या</a>
+        <!-- </div> -->
+
+      
+      <!-- </div> -->
+
+  
+
+    
+    </div>
+
+    <script>
+
+    </script>
+  </body>
+</html>
